@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+	int mark;
+	printf("enter marks: ");
+	scanf("%d",&mark);
+	mark>84?printf("Grade A"):mark>69?printf("Grade B"):mark>54?printf("Grade C"):mark>40?printf("Grade D"):printf("Grade F");
+}
