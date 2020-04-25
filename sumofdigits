@@ -1,18 +1,27 @@
 #include<stdio.h>
+/* Function declaration */
+int sumOfDigits(int num);
 int main()
 {
-	int a;
-	int sum,t,rem;
-	printf("enter the number: ");
-	scanf("%d",&a);
-	t=a;
-	while(t != 0)
-	{
-		rem = t % 10;
-		sum = sum + rem;
-		t = t / 10;
-	}
-	printf("the sum of the digits of the given number is %d",sum);
-	return 0;
+int
+ num,
+ sum;
+printf("Enter any number to find sum of digits: ");
+scanf("%d",&num);
+ sum =sumOfDigits(num);
+printf("Sum of digits of %d = %d",num,sum);
+return
+0;
 }
+/** * Recursive function to find sum of digits of a number */
+int
+sumOfDigits(int num)
+{
+/* Base condition*/
+if(num==0)
+return 0;
+return((num%10)+sumOfDigits(num/10));
+}
+
+
 
